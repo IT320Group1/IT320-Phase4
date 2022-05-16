@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"  href="addUpdate.css">
+<script src = "logInSignup.js"></script>
+  
+</head>
+
+
+<body>
+
+<header>
+
+
+<nav>
+<ul>
+<li class="logo"><img src="THE_COMFORT_ZONE-resize.png" alt="logo"></li>
+<li><a href="#news" style=" font-weight: 900;"><pre>THE COMFORT ZONE    </pre></a></li>
+ <li class = 'link'><a href="adminHome.php">Home ></a></li>
+  <li class = 'link'><a class="active" href="add.html">Add</a></li>
+</ul>
+</nav>
+</header>
+		
+<h1>Add a new website</h1>
+<br>
+<br>
+        
+ <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+
+	
+          <div class="formbg">
+            <div class="content-padding">
+              <p>Add a website</p>
+			  <form name ="form" method = "POST" action='addBackend.php' enctype = "multipart/form-data" onsubmit="return validationRequestAdd();">
+                  <div class="field">
+                  <label for="webName">Website name:</label>
+                  <input type="text" name="Wname" value="" required>
+                </div>
+                <div class="field">
+ 
+                       <label for="description">Description</label>
+                  
+                   <textarea name = "description" rows = "6" cols = "55" placeholder = "please put a description about the website" required></textarea>
+                </div>
+                
+		   <div class="field">
+                  <label for="brand">Provided brand:</label>
+                  <input type="text" id="brand" name="brand" value="" required>
+                </div>
+                              
+               <div class="field">
+                  <label for="attachment">Website image</label>
+                  <input type="file" id = "image" name="image" required onchange="validationImage()">
+				  
+                </div>
+				
+                <div class="field">
+                  <input type="submit" name="submit" value="Add">
+                </div>
+				
+              </form>
+			  
+			  
+            </div>
+          </div>
+		  <div id="imagePreview"></div>
+    <footer>
+            <br>
+            <div style="color: white;">
+              All rights reserved for group 1 2022  
+            </div> 
+			<br>
+
+        </footer>
+        
+      
+</body>
+
+</html>
